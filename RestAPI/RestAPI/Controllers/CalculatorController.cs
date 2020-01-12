@@ -10,11 +10,15 @@ namespace RestAPI.Controllers
     [ApiController]
     public class CalculatorController : ControllerBase
     {
-
+        [HttpGet]
+        public ActionResult<IEnumerable<string>> Get()
+        {
+            return new string[] { "Soma", "Subtração", "Divisão", "Multiplicação" };
+        }
 
         // GET api/values/5/5
-        [HttpGet("{firstNumber}/{secondNumber}")]
-        public IActionResult Sum(string firstNumber, string secondNumber)
+        [HttpGet("soma/{firstNumber}/{secondNumber}")]
+        public IActionResult Soma(string firstNumber, string secondNumber)
         {
             decimal soma;
 
@@ -22,6 +26,52 @@ namespace RestAPI.Controllers
             {
                 soma = Convert.ToDecimal(firstNumber) + Convert.ToDecimal(secondNumber);
                 return Ok(soma.ToString());
+            }
+
+            return BadRequest("Invalid Input");
+        }
+
+        // GET api/values/5/5
+        [HttpGet("subtracao/{firstNumber}/{secondNumber}")]
+        public IActionResult Subtracao(string firstNumber, string secondNumber)
+        {
+            decimal subtracao;
+
+            if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
+            {
+                subtracao = Convert.ToDecimal(firstNumber) - Convert.ToDecimal(secondNumber);
+                return Ok(subtracao.ToString());
+            }
+
+            return BadRequest("Invalid Input");
+        }
+
+        // GET api/values/5/5
+        [HttpGet("multiplicacao/{firstNumber}/{secondNumber}")]
+        public IActionResult Multiplicacao(string firstNumber, string secondNumber)
+        {
+            decimal multiplicacao;
+
+            if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
+            {
+                multiplicacao = Convert.ToDecimal(firstNumber) * Convert.ToDecimal(secondNumber);
+                return Ok(multiplicacao.ToString());
+            }
+
+            return BadRequest("Invalid Input");
+        }
+
+
+        // GET api/values/5/5
+        [HttpGet("divisao/{firstNumber}/{secondNumber}")]
+        public IActionResult Divisao(string firstNumber, string secondNumber)
+        {
+            decimal divisao;
+
+            if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
+            {
+                divisao = Convert.ToDecimal(firstNumber) / Convert.ToDecimal(secondNumber);
+                return Ok(divisao.ToString());
             }
 
             return BadRequest("Invalid Input");
