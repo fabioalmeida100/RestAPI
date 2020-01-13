@@ -32,6 +32,7 @@ namespace RestAPI
             var connection = Configuration["MySqlConnetion:MySqlConnectionString"];
             services.AddDbContext<MySQLContext>(options => options.UseMySql(connection));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddApiVersioning();
             services.AddScoped<IPersonService, PersonServiceImpl>();
         }
 
