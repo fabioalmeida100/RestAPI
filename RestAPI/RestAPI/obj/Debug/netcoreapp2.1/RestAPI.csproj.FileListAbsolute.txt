@@ -20,7 +20,6 @@ C:\dev\RestAPI\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\RestAPI.runtimeconfig.jso
 C:\dev\RestAPI\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\RestAPI.runtimeconfig.dev.json
 C:\dev\RestAPI\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\RestAPI.dll
 C:\dev\RestAPI\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\RestAPI.pdb
-C:\dev\RestAPI\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.csprojAssemblyReference.cache
 C:\dev\RestAPI\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.RazorAssemblyInfo.cache
 C:\dev\RestAPI\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.RazorAssemblyInfo.cs
 C:\dev\RestAPI\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.AssemblyInfoInputs.cache
@@ -28,3 +27,5 @@ C:\dev\RestAPI\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.AssemblyInfo.cs
 C:\dev\RestAPI\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.RazorTargetAssemblyInfo.cache
 C:\dev\RestAPI\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.dll
 C:\dev\RestAPI\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.pdb
+C:\dev\RestAPI\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\Evolve.json
+C:\dev\RestAPI\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.csprojAssemblyReference.cache

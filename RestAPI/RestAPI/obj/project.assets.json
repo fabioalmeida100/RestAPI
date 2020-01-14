@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
+      "Evolve/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Evolve.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Evolve.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -4669,6 +4678,23 @@
     }
   },
   "libraries": {
+    "Evolve/2.3.0": {
+      "sha512": "s9S1QEm6OHRLszbkHWLuuqcY6jNsGFkafk8aq4XIowKtUBTZHogx6TVRCvlgoMfhs7DcHS3oi3YDVxZXm2Znsg==",
+      "type": "package",
+      "path": "evolve/2.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "evolve.2.3.0.nupkg.sha512",
+        "evolve.nuspec",
+        "lib/net35/Evolve.dll",
+        "lib/net35/Evolve.pdb",
+        "lib/net461/Evolve.dll",
+        "lib/net461/Evolve.pdb",
+        "lib/netstandard2.0/Evolve.dll",
+        "lib/netstandard2.0/Evolve.pdb"
+      ]
+    },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "sha512": "owAlEIUZXWSnkK8Z1c+zR47A0X6ykF4XjbPok4lQKNuciUfHLGPd6QnI+rt/8KlQ17PmF+I4S3f+m+Qe4IvViw==",
       "type": "package",
@@ -12633,6 +12659,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "Evolve >= 2.3.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Mvc.Versioning >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
@@ -12678,6 +12705,10 @@
     "frameworks": {
       "netcoreapp2.1": {
         "dependencies": {
+          "Evolve": {
+            "target": "Package",
+            "version": "[2.3.0, )"
+          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
