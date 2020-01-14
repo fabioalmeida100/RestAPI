@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RestAPI.Model.Services
+namespace RestAPI.Repository.Services
 {
-    public interface IPersonService
+    public interface IPersonRespository
     {
         Person Create(Person person);
         Person FindById(long id);

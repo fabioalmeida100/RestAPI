@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using RestAPI.Model;
-using RestAPI.Model.Services;
+using RestAPI.Repository;
+using RestAPI.Repository.Services;
 
 namespace RestAPI.Controllers
 {
@@ -15,9 +15,9 @@ namespace RestAPI.Controllers
     [ApiController]
     public class PersonController : ControllerBase
     {
-        private IPersonService _personService;
+        private IPersonBusiness _personService;
 
-        public PersonController(IPersonService personService)
+        public PersonController(IPersonBusiness personService)
         {
             _personService = personService;
         }

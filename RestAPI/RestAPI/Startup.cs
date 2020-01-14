@@ -11,9 +11,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using RestAPI.Model.Context;
-using RestAPI.Model.Services;
-using RestAPI.Model.Services.Implementation;
+using RestAPI.Repository.Context;
+using RestAPI.Repository.Services;
+using RestAPI.Repository.Services.Implementation;
+using RestAPI.Respository.Generic;
 
 namespace RestAPI
 {
@@ -33,7 +34,9 @@ namespace RestAPI
             services.AddDbContext<MySQLContext>(options => options.UseMySql(connection));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddApiVersioning();
-            services.AddScoped<IPersonService, PersonServiceImpl>();
+
+            services.AddScoped<IPersonBusiness, PersonBusinessImpl>();
+            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

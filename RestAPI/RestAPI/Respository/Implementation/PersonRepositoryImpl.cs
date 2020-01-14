@@ -1,17 +1,17 @@
-﻿using RestAPI.Model.Context;
+﻿using RestAPI.Repository.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace RestAPI.Model.Services.Implementation
+namespace RestAPI.Repository.Services.Implementation
 {
-    public class PersonServiceImpl : IPersonService
+    public class PersonRepositoryImpl
     {
         private MySQLContext _context;
 
-        public PersonServiceImpl(MySQLContext context)
+        public PersonRepositoryImpl(MySQLContext context)
         {
             _context = context;
         }
