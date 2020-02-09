@@ -36,9 +36,12 @@ namespace RestAPI
         public void ConfigureServices(IServiceCollection services)
         {
             var connectionString = _configuration["MySqlConnetion:MySqlConnectionString"];
-            services.AddDbContext<MySQLContext>(options => options.UseMySql(connectionString));
+            services.AddDbContext<MySQLContext>(options => options.
+                UseMySql(connectionString)
+                .UseLazyLoadingProxies());
 
-            MigracaoBaseDados(connectionString);
+            /* Migration com Evolve */
+            //MigracaoBaseDados(connectionString);
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddApiVersioning();

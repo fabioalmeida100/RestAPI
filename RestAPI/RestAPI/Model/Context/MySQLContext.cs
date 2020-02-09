@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
 using RestAPI.Infra;
+using RestAPI.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,10 +27,17 @@ namespace RestAPI.Repository.Context
             
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        // {
+        //base.OnConfiguring(optionsBuilder);
+        //optionsBuilder.UseLoggerFactory(LoggerFactory);
+        //}
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseLoggerFactory(LoggerFactory);
+            modelBuilder.ApplyConfiguration(new PersonConfiguration());
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

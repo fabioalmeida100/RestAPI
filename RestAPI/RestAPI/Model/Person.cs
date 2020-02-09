@@ -1,4 +1,5 @@
 ﻿using RestAPI.Model.Base;
+using RestAPI.Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,6 @@ namespace RestAPI.Repository
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Address { get; set; }
-        public string Gender { get; set; }
-
-
+        public GenderEnum Gender { get; set; }
     }
 }

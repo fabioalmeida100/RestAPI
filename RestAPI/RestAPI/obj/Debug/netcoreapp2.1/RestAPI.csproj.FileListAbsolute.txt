@@ -31,7 +31,6 @@ C:\dev\RestAPI\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\Evolve.json
 C:\dev\RestAPI\RestAPI\RestAPI\obj\Debug\netcoreapp2.1\RestAPI.csprojAssemblyReference.cache
 C:\dev\CSharp\RestAPI\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\appsettings.Development.json
 C:\dev\CSharp\RestAPI\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\appsettings.json
-C:\dev\CSharp\RestAPI\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\Evolve.json
 C:\dev\CSharp\RestAPI\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
 C:\dev\CSharp\RestAPI\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\RestAPI.deps.json
 C:\dev\CSharp\RestAPI\RestAPI\RestAPI\bin\Debug\netcoreapp2.1\RestAPI.runtimeconfig.json
