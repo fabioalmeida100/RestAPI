@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using RestAPI.Model.Base;
 using RestAPI.Repository.Context;
 using System;
@@ -6,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RestAPI.Respository.Generic
+namespace RestAPI.Repository.Generic
 {
     public class GenericRepository<T> : IRepository<T> where T: BaseEntity
     {
@@ -14,8 +15,8 @@ namespace RestAPI.Respository.Generic
         private DbSet<T> dataset;
 
         public GenericRepository(MySQLContext context)
-        {
-            _context = context;
+        {           
+            _context = context;            
             dataset = _context.Set<T>();
         }
 

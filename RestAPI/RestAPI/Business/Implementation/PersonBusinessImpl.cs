@@ -1,5 +1,5 @@
 ﻿using RestAPI.Repository.Context;
-using RestAPI.Respository.Generic;
+using RestAPI.Repository.Generic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,12 +34,12 @@ namespace RestAPI.Repository.Services.Implementation
                
         public Person FindById(long id)
         {            
-            return _repository.FindById(id); ;
+            return _repository.FindById(id);
         }
 
         public Person Update(Person person)
         {
-            return _repository.Update(person); ;
+            return _repository.Update(person);
         }
     }
 }

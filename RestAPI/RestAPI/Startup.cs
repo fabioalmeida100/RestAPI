@@ -14,7 +14,7 @@ using Microsoft.Extensions.Options;
 using RestAPI.Repository.Context;
 using RestAPI.Repository.Services;
 using RestAPI.Repository.Services.Implementation;
-using RestAPI.Respository.Generic;
+using RestAPI.Repository.Generic;
 
 namespace RestAPI
 {

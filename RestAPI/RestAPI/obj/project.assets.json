@@ -12674,11 +12674,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\RestAPI\\RestAPI\\RestAPI\\RestAPI.csproj",
+      "projectUniqueName": "C:\\dev\\CSharp\\RestAPI\\RestAPI\\RestAPI\\RestAPI.csproj",
       "projectName": "RestAPI",
-      "projectPath": "C:\\dev\\RestAPI\\RestAPI\\RestAPI\\RestAPI.csproj",
+      "projectPath": "C:\\dev\\CSharp\\RestAPI\\RestAPI\\RestAPI\\RestAPI.csproj",
       "packagesPath": "C:\\Users\\fabio\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\RestAPI\\RestAPI\\RestAPI\\obj\\",
+      "outputPath": "C:\\dev\\CSharp\\RestAPI\\RestAPI\\RestAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\fabio\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RestAPI.Respository.Generic
+namespace RestAPI.Repository.Generic
 {
     public interface IRepository<T> where T: BaseEntity
     {
