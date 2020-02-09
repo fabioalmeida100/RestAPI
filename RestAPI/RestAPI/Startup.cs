@@ -15,6 +15,7 @@ using RestAPI.Repository.Context;
 using RestAPI.Repository.Services;
 using RestAPI.Repository.Services.Implementation;
 using RestAPI.Repository.Generic;
+using Microsoft.AspNetCore.Rewrite;
 
 namespace RestAPI
 {
@@ -48,6 +49,17 @@ namespace RestAPI
 
             services.AddScoped<IPersonBusiness, PersonBusinessImpl>();
             services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1",
+                    new Swashbuckle.AspNetCore.Swagger.Info
+                    {
+                        Title = "RESTful API Sample",
+                        Version = "v1",
+                        Description = "Projeto de Api Restful de Exemplo utilizando Web Api e EF Core"
+                    });
+            });
         }
 
         private void MigracaoBaseDados(string connectionString)
@@ -85,9 +97,16 @@ namespace RestAPI
             {
                 app.UseHsts();
             }
-
-            app.UseHttpsRedirection();
+                        
             app.UseMvc();
+
+            // Swagger Configuration
+            var option = new RewriteOptions();
+            option.AddRedirect("^$", "swagger");
+            app.UseHttpsRedirection();
+            app.UseRewriter(option);
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "RESTful API Sample"));
         }
     }
 }
