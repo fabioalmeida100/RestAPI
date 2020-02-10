@@ -52,7 +52,7 @@ namespace RestAPI.Controllers
         }
 
         // PUT: api/Person/5
-        [HttpPut("{id}")]
+        [HttpPut]
         public IActionResult Put([FromBody] Person person)
         { 
             if (person == null)
